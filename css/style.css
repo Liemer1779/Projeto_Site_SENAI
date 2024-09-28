@@ -1,110 +1,117 @@
 :root,
 :root[data-theme="dark"] {
-
-    --primary-color: #e0e0e0;
-    --primary-bg:#000;
-    --hover-menu:#8f8f8f;
-    --icon-color: #11cde6;
+    --primary-color: #ebebeb;
+    --primary-bg: #1d1d1d;
+    --hover-menu: #898989;
+    --icon-color: #169adc;
+    --icone-tema: #d7b21e;
 }
 
 :root[data-theme="light"] {
-    --primary-color: #000;
-    --primary-bg:#e0e0e0;
+    --primary-color: #1d1d1d;
+    --primary-bg: #ebebeb;
+    --hover-menu: #898989;
+
 }
 
-
-body {
-    background: var(--primary-bg);
+body{
+    background: var(--primary-bg);  
     color: var(--primary-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px; 
 }
 
-a {
+a{
     text-decoration: none;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
-a:hover {
 
-    color: var(--hover-menu)
+a:hover{
+  color: var(--hover-menu)
 }
 
 i {
-    color: var(--icon-color)
+  color: var(--icon-color);
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
+
+/* header  */
 #header {
     display: flex;
     flex-flow: row wrap;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0.5rem 1rem  ;
+    padding: 0.5rem 1rem;
     z-index: 2;
 }
 
-.logo{
-    width: 3.2rem;
-    height: 3.25rem;
-}
-
-img {
-width: 15%;
+.logo {  
+    width: 3.25rem;  
+    height: 3.25rem;  
 }
 
 .header-toggle {
     display: flex;
     justify-content: flex-end;
 }
+
 #toggleTheme {
-    color: yellow;
+    color: var(--icone-tema);
     font-size: 2rem;
     cursor: pointer;
 }
 
-.menu {
-    
-    list-style-type: none;
+.menu {   /* UL */
     display: flex;
-    align-items:center;
+    align-items: center;
     background: var(--primary-bg);
     gap: 1rem;
 }
+
 .menu-item {
-    width:100;
+    width: 100%;
 }
+
+
 .header-nav {
-    display:none;
+    display: none;
 }
+
+
+/* Menu Mobile */
+
 .menu-mobile {
-    width: 100vw;
+    width: 100vw; 
     position: fixed;
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid red;
 }
-.menu-monile .menu-link {
+
+.menu-mobile .menu-link {
     flex-direction: column;
     justify-content: center;
     padding: 0.5rem 1rem;
 }
+
 /* Responsividade */
 
 @media (min-width: 768px) {
     #header {
-        position: fixed;
-        padding: 1rem 6rem;
+       position: fixed;
+       padding: 1rem 6rem;
     }
-
     .nav-mobile {
-        display:none;
+        display: none;
     }
-    .header.nav{
+    .header-nav{
         display: flex;
     }
-    
 }
