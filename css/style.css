@@ -13,13 +13,18 @@
     --hover-menu: #898989;
 
 }
-
+/* CSS Geral */
 body{
     background: var(--primary-bg);  
     color: var(--primary-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 22px; 
 }
+
+html[data-theme="light"] .logo {
+    filter: invert(1);
+}
+
 
 a{
     text-decoration: none;
@@ -32,6 +37,23 @@ a:hover{
 
 i {
   color: var(--icon-color);
+}
+
+b {
+    font: weight 600;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight:200;
+}
+
+p, span, li {
+    font-size: 1rem;
+}
+
+p { 
+    text-align: justify;
 }
 
 *{
@@ -50,11 +72,12 @@ i {
     width: 100%;
     padding: 0.5rem 1rem;
     z-index: 2;
+    background: var(--primary-bg)
 }
 
 .logo {  
-    width: 3.25rem;  
-    height: 3.25rem;  
+    width: 5rem;  
+    height: 5rem;  
 }
 
 .header-toggle {
@@ -88,7 +111,7 @@ i {
 /* Menu Mobile */
 
 .menu-mobile {
-    width: 100vw; 
+    width: 100vw; /*V W = Viewport Width */
     position: fixed;
     bottom: 0;
     justify-content: space-between;
@@ -101,6 +124,92 @@ i {
     padding: 0.5rem 1rem;
 }
 
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text {
+    color: #169adc;  /*cor de link */
+}
+
+.menu-icon, .menu-text {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.menu-icon{
+    font-size: 2.3rem;
+}
+
+.menu-text {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.menu-principal {
+    gap: 2rem;
+}
+
+.menu-social .menu-icon:hover {
+    color: aqua;
+}
+.menu-social {
+    gap: 2rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3rem;
+    color: var(--primary-color);
+    border: none;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: ease-in-out .5s;
+}
+
+.btn span, .btn i {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.btn-primary span {
+    color: var(--primary-color);
+}
+
+.btn-primary {
+    border: 1px solid var(--hover-menu);
+}
+
+/* Main */
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+#home, .projetos, .sobre, .contato {
+    padding: 2.5rem 1rem;
+}
+
 /* Responsividade */
 
 @media (min-width: 768px) {
@@ -111,7 +220,24 @@ i {
     .nav-mobile {
         display: none;
     }
-    .header-nav{
-        display: flex;
+    .header-nav {
+        display: flex;   
+}
+    .header-nav,
+    .header-toggle {
+        min-width: 30%;
     }
+
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+
+    }
+    h3 {
+
+    }
+#home, .projetos, .sobre {
+    padding: 8rem 6rem 4rem 6rem;
+}
 }
