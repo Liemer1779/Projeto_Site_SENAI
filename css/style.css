@@ -18,7 +18,7 @@ body{
     background: var(--primary-bg);  
     color: var(--primary-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 22px; 
+    font-size: 1px; 
 }
 
 html[data-theme="light"] .logo {
@@ -40,11 +40,11 @@ i {
 }
 
 b {
-    font: weight 600;
+    font: weight 300;
 }
 
 h1{
-    font-size: 2.5rem;
+    font-size: 2.52rem;
     font-weight:200;
 }
 
@@ -76,8 +76,8 @@ p {
 }
 
 .logo {  
-    width: 5rem;  
-    height: 5rem;  
+    width: 7rem;  
+    height: 7rem;  
 }
 
 .header-toggle {
@@ -87,7 +87,7 @@ p {
 
 #toggleTheme {
     color: var(--icone-tema);
-    font-size: 2rem;
+    font-size: 3rem;
     cursor: pointer;
 }
 
@@ -136,12 +136,28 @@ p {
     font-weight: 600;
 }
 
-.menu-icon{
+.menu-icon1, .menu-icon2, .menu-icon3, .menu-icon4 {
     font-size: 2.3rem;
 }
 
+.menu-icon1 {
+    color: var(--primary-color);
+}
+
+.menu-icon2 {
+    color: rgb(129, 52, 175)
+}
+
+.menu-icon3 {
+    color: green;
+}
+
+.menu-icon4 {
+    color: #0e76a8;
+}
+
 .menu-text {
-    font-size: .75rem;
+    font-size: 1.15rem;
     text-transform: uppercase;
 }
 
@@ -210,6 +226,82 @@ p {
     padding: 2.5rem 1rem;
 }
 
+
+/* Projetos */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card.cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 100;
+    color: royalblue;
+    font-family:    ;
+}
+.card-description {
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: teal;
+    font-family: ;
+}
+
+.card-list, .sobre-lista {
+    margin-left: 1.25rem;
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+}
+
+.card-item, .sobre-item {
+    list-style: disc;
+    margin-top: 10px;
+}
+
+.card-buttom, .card-description {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex start;
+}
+
+.card-buttom .btn {
+    padding: .65rem 1.25rem;
+    margin-top: 15px;
+}
+
+.card-buttom .btn span {
+    font-size: 1.5rem;
+}
+
+.projetos .btn {
+    width: auto;
+    margin: auto;
+}
+
+
+
+
 /* Responsividade */
 
 @media (min-width: 768px) {
@@ -237,7 +329,61 @@ p {
     h3 {
 
     }
-#home, .projetos, .sobre {
+#home, .projetos, .sobre, .contato {
     padding: 8rem 6rem 4rem 6rem;
+    }
 }
+
+@media (min-width:992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+
+    .card-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .card-cover {
+        width: 55%;
+    }
+}
+
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+    #home {
+        padding: 10rem 6rem 2rem;
+    }
+    .main-content .btn {
+        width: auto;
+    }
+    p, span, li {
+        font-size: 1.15rem;
+    }
+    .card-buttom .btn, .description-button .btn {
+        width: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 6.25rem;
+    }
+    h2 {
+        font-size: 4.5rem;
+    }
+    h3 {
+        font-size: 3.25rem;
+    }
+    .header {
+        padding: 12rem 15rem 2rem;
+    }
+    .projetos, .sobre, .contato {
+        padding: 10rem 15rem 4rem;
+    }
 }
