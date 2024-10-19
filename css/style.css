@@ -18,7 +18,7 @@ body{
     background: var(--primary-bg);  
     color: var(--primary-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1px; 
+    font-size: 25px; 
 }
 
 html[data-theme="light"] .logo {
@@ -116,6 +116,7 @@ p {
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid red;
+    z-index: 9999;
 }
 
 .menu-mobile .menu-link {
@@ -182,8 +183,10 @@ p {
     border-radius: 3rem;
     color: var(--primary-color);
     border: none;
-    padding: .5rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     cursor: pointer;
+  
+    
 }
 
 .btn:hover {
@@ -258,13 +261,13 @@ p {
     font-size: 2rem;
     font-weight: 100;
     color: royalblue;
-    font-family:    ;
+    font-family:   Arial, Helvetica, sans-serif ;
 }
 .card-description {
     font-size: 1.2rem;
     font-weight: 100;
     color: teal;
-    font-family: ;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .card-list, .sobre-lista {
