@@ -119,12 +119,12 @@ p {
 /* Menu Mobile */
 
 .menu-mobile {
-    width: 100vw; /*V W = Viewport Width */
+    width: 100%; /*V W = Viewport Width */
     position: fixed;
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid var(--icone-tema);
-    z-index: 99999;
+    z-index: 999;
 }
 
 .menu-mobile .menu-link {
