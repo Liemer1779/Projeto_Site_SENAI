@@ -124,7 +124,7 @@ p {
     bottom: 0;
     justify-content: space-between;
     border-top: 3px solid var(--icone-tema);
-    z-index: 9999;
+    z-index: 99999;
 }
 
 .menu-mobile .menu-link {
