@@ -129,12 +129,6 @@ p {
     z-index: 999;
 }
 
-.menu-mobile .menu-link {
-    flex-direction: column;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-}
-
 .menu-link.active .menu-icon,
 .menu-link.active .menu-text,
 .menu-link:hover .menu-icon,
